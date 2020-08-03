@@ -50,6 +50,7 @@
     "inquirer": "^5.0.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
+    "log-symbols": "^4.0.0",
     "mkdirp": "^0.5.1",
     "mv": "^2.1.1",
     "nornj": "^5.0.0",
