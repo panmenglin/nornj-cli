@@ -101,17 +101,23 @@ program
   });
 
 // block manage
-const blockType = {
-  add: '../lib/block/add',
-  list: '../lib/block/list.js',
-  help: ''
-};
-
 program
   .command('block')
   .description('Block Manage')
   .action((type) => {
-    type ? require(blockType[type])() : require(blockType.help)();
+    const blockType = {
+      list: '../lib/block/list.js',
+      create: '../lib/block/create.js',
+    };
+
+    function blockHelp() {
+      console.log('');
+      console.log('Commands:');
+      console.log('  $ block list      Show block list');
+      console.log('  $ block create    Create a new block');
+    }
+    
+    type && blockType[type] ? require(blockType[type])() : blockHelp();
   });
 
 program.parse(process.argv);

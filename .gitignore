@@ -2,3 +2,4 @@
 /docs/.vuepress/dist/
 
 .vscode
+.DS_Store
